@@ -1,5 +1,4 @@
 import "@testing-library/jest-dom";
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import NavBar from "../components/NavBar";
@@ -14,12 +13,8 @@ beforeEach(() => {
   ).container;
 });
 
-test('wraps content in a div with "navbar" class', () => {
-  expect(container.querySelector(".navbar")).toBeInTheDocument();
-});
-
 test("renders a Home <NavLink>", async () => {
-  const a = screen.queryByText(/Home/g);
+  const a = screen.queryByText(/Home/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
@@ -31,7 +26,7 @@ test("renders a Home <NavLink>", async () => {
 });
 
 test("renders a Movies <NavLink>", async () => {
-  const a = screen.queryByText(/Movies/g);
+  const a = screen.queryByText(/Movies/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
@@ -43,7 +38,7 @@ test("renders a Movies <NavLink>", async () => {
 });
 
 test("renders a Actors <NavLink>", async () => {
-  const a = screen.queryByText(/Actors/g);
+  const a = screen.queryByText(/Actors/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
@@ -55,7 +50,7 @@ test("renders a Actors <NavLink>", async () => {
 });
 
 test("renders a Directors <NavLink>", async () => {
-  const a = screen.queryByText(/Directors/g);
+  const a = screen.queryByText(/Directors/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
