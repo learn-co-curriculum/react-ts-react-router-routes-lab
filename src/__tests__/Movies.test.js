@@ -16,7 +16,7 @@ test("renders without any errors", () => {
 
 test("renders 'Movies Page' inside of a <h1 />", () => {
   render(<Movies />);
-  const h1 = screen.queryByText(/Movies Page/g);
+  const h1 = screen.queryByText(/Movies Page/);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
