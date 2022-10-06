@@ -56,7 +56,9 @@ from React Router, as well as `App` as the top level component.
 
 ### data.ts
 
-This file contains seed data for **Actors**, **Movies**, and **Directors**.
+This file contains seed data for **Actors**, **Movies**, and **Directors**. Be
+sure to examine this file to understand how the data is structured to make
+accessing it easier later on.
 
 ## Components
 
@@ -84,21 +86,38 @@ This component should render the text `Home Page` in an `<h1>`.
 
 ### Movies
 
-This component should render the text `Movies Page` in an `<h1>`, and make a new
-`<div>` for each movie. The `<div>` should contain the movie's title, time and a
-`<ul>` with a list of its genres, each within their own `<li>`.
+This component should render:
+
+1. The text `Movies Page` in an `<h1>`
+1. A new `<div>` for each movie with the following:
+   - The movie's `title` in an `h3`.
+   - The movie's `time` and a `p`.
+   - A `<ul>` with a list of the movie's `genres`, each within their own `<li>`.
+
+[Completed Movies Page Screenshot](https://s3.amazonaws.com/learn-verified/react-router-lab-movies-page.png)
 
 ### Directors
 
-This component should render the text `Directors Page` in an `<h1>`, and make a
-new `<div>` for each director. The `<div>` should contain the director's name
-and a `<ul>` with a list of their movies.
+This component should render:
+
+1. The text `Directors Page` in an `<h1>`
+1. A new `<div>` for each director with the following:
+   - The director's `name` in an `h3`.
+   - A `<ul>` with a list of the director's `movies`, each within their own
+     `<li>`.
+
+[Completed Directors Page Screenshot](https://s3.amazonaws.com/learn-verified/react-router-lab-directors-page.png)
 
 ### Actors
 
-This component should render the text `Actors Page` in an `<h1>`, and make a new
-`<div>` for each actor. The `<div>` should contain the actor's name and a `<ul>`
-with a list of their movies.
+This component should render:
+
+1. The text `Actors Page` in an `<h1>`
+1. A new `<div>` for each actor with the following:
+   - The actor's `name` in an `h3`.
+   - A `<ul>` with a list of the actor's `movies`, each within their own `<li>`.
+
+[Completed Actors Page Screenshot](https://s3.amazonaws.com/learn-verified/react-router-lab-actors-page.png)
 
 > **Note**: The tests will count how many `<div>`s are nested inside your
 > `Movies`, `Directors`, and `Actors` components. So to get tests to pass, you
