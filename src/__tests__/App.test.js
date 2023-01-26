@@ -1,7 +1,6 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 import App from "../components/App";
 
@@ -21,7 +20,7 @@ test('renders the Home component using the <Route path="/">', () => {
       <App />
     </BrowserRouter>
   );
-  expect(screen.queryByText(/Home Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Home Page/)).toBeInTheDocument();
 });
 
 test('renders the Actors component using the <Route path="/actors">', () => {
@@ -31,7 +30,7 @@ test('renders the Actors component using the <Route path="/actors">', () => {
       <App />
     </BrowserRouter>
   );
-  expect(screen.queryByText(/Actors Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Actors Page/)).toBeInTheDocument();
 });
 
 test('renders the Directors component using the <Route path="/directors">', () => {
@@ -41,7 +40,7 @@ test('renders the Directors component using the <Route path="/directors">', () =
       <App />
     </BrowserRouter>
   );
-  expect(screen.queryByText(/Directors Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Directors Page/)).toBeInTheDocument();
 });
 
 test('renders the Movies component using the <Route path="/movies">', () => {
@@ -51,5 +50,5 @@ test('renders the Movies component using the <Route path="/movies">', () => {
       <App />
     </BrowserRouter>
   );
-  expect(screen.queryByText(/Movies Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Movies Page/)).toBeInTheDocument();
 });
